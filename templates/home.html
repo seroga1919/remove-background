@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Remove Background</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> -->
+    <link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/homestyle.css') }}" rel="stylesheet" />
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Jquery-->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/xlsx.full.min.js') }}"></script>
+  </head>
+
+<body>
+
+  <div class="tit row">
+    <div class="logo col-md-8">
+      <span id="title"><a href="{{ url_for('landing') }}">Remove background</a></span>
+    </div>
+    <ul class="nav-links col-md-4">
+      <li><a href="{{ url_for('landing') }}">How It Works?</a></li>
+      <li><a onClick="document.getElementById('last').scrollIntoView();">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="centerpage row">
+    <div class="setting col-md-5">
+      <div class="setting_sub row">
+        <div class="sub_setting col-md-6">
+          <label class="setting_label">Language</label>
+          <input id="setting_lang" type="text" value="english">
+          <label class="setting_label">Height coef</label>
+          <input id="setting_h" type="text" value="0.6">
+        </div>
+        <fieldset class="cascade col-md-6">
+          <legend class="setting_label">Method</legend>
+
+          <input type="radio" name="Cascaded" id="nameA" value="Program">
+          <label for="Program" class="setting_label">Program</label>
+
+          <input type="radio" name="Cascaded" id="nameB" value="Manual">
+          <label for="Manual" class="setting_label">Manual</label>
+
+        </fieldset>
+      </div>
+    </div>
+    <div class="buttons col-md-7">
+      <form id="uploadform" method="POST" enctype="multipart/form-data" action="">
+
+        <input type="file" name="file" id="upform" accept="image/*,application/pdf" multiple="multiple" hidden="hidden" />
+        <button type="button" id="custom-button">Choose Images</button>
+        <span id="custom-text">No images</span>
+        <input type="button" id="convert_button" class="myButton myButton:hover myButton:active" value="Convert & Download All">
+        
+      </form>
+    </div>
+  </div>
+
+  <main class="main row">
+    <div id="main_mid" class="col-md-9">
+        <img class="loadAnim" src="{{ url_for('static', filename='images/Spin-1s-200px.svg') }}" alt="svg">
+        <canvas id="canvas" width="100%">  
+          <!-- table will come here -->
+        </canvas>
+        <div id="table" class="table-responsive"></div>
+
+    </div>
+
+    <div class="main_right col-md-3">
+      <div id="image_list" style="overflow: scroll;">
+        
+      </div>
+    </div>
+
+    <div class="buttons">
+
+      <a href="{{ url_for('.downloadX') }}">
+        <button id="xlsx" class="myButton myButton:hover myButton:active">Download <span
+            id="xlsx"> All</span></button>
+      </a>
+      <!-- <a href="{{ url_for('.downloadC')}}">
+        <button id="xml" class="myButton myButton:hover myButton:active">Download xml All</button>
+      </a> -->
+    </div>    
+  </main>
+  
+  <script type="text/javascript" src="../static/js/script.js"></script>
+  <script type="text/javascript" src="../static/js/table_extraction.js"></script>
+</body>
+</html>

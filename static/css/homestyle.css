@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+button, input[type=button] {
+    font-family: "Montserrat", sans-serif;
+}
+
+.main {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+}
+.main.row {
+    margin: 0 5px;
+}
+.main_left {
+    width: 15%;
+    background-color: grey;
+    height: 500px;
+}
+.main_right {
+    width: 20%;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 2px solid #CCC;
+    padding: 10px 6px;
+    outline: 0;    
+    height: 500px;
+}
+
+#canvas {
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    margin: auto;
+    padding: 0 0;
+    outline: 0;        
+}
+#upform {
+    width: 5%;      
+}
+#table {
+    width: 90%;
+    height: 500px;
+    border-radius: 8px;
+    border: 6px solid #CCC;
+    padding: 10px 6px;
+    outline: 0;        
+}
+#bef {
+    border-radius: 8px;
+    border: 6px solid #CCC;
+    padding: 10px 6px;
+    font-size: xx-large;
+    outline: 0; 
+}
+.bttn{
+    text-align: left;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 3%;
+    border: none;
+}
+.pdfbtn{
+    border: none;
+    font-size: 18px;
+    padding-left: 5%;
+
+  }
+.img_dis { 
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #CCC;
+    padding: 5px 5px;
+    outline: 0;    
+}
+#image_list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.tit {
+    padding: 1% 8%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s ease;
+    background-color: #4d636f ;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo a {
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        padding: 0 10%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+.sectionHeader {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(29, 29, 29);
+    padding-bottom: 25px;
+}
+
+.centerpage {
+    padding: 3% 3%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.setting {
+    border-radius: 8px;
+    border: 2px solid #CCC;
+}
+.setting_sub {
+    display: flex;
+    width: 100%;
+    padding:2% 1%;
+}
+.setting_sub.row{
+    margin: 0 5px;
+}
+.sub_setting {
+    display: flex;
+    flex-direction: column;
+}
+.setting_label{
+    padding: 5% 4%;
+}
+.cascade {
+    width: 100%;
+}
+h3 {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+img {
+    align-self: center;
+    width: 23rem;
+}
+
+#icon {
+    height: 5%;
+    width: 5%;
+}
+#uploadform {
+    padding: 3% 0%;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    margin: auto;
+}
+
+#custom-button {
+    margin: 1rem 1rem;
+    border: 0;
+    background-color: rgb(64, 165, 190);
+    border-radius: 5rem;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    transition: ease 0.2s;
+    outline: none;
+}
+
+#custom-button:hover {
+    transform: scale(1.1);
+}
+
+#custom-text {
+    margin: auto;
+    font-family: sans-serif;
+    color: #aaa;
+}
+
+.myButton {
+    margin: 1rem 1rem;
+    border: 0;
+    background-color: rgb(64, 165, 190);
+    border-radius: 5rem;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    transition: ease 0.2s;
+    outline: none;
+}
+
+.myButton:hover {
+    transform: scale(1.1);
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+#OR {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .buttons {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #custom-button, .myButton {
+        font-size: 12px;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#middle {
+    padding-bottom: 5rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#last p {
+    margin-left: 0;
+    color: white;
+}
+
+#last {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #3498db;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+}
+
+#last div {
+    display: flex;
+    align-items: center;
+}
+
+#call {
+    width: 12rem;
+}
+
+#main_mid {
+    padding-bottom: 5rem;
+}
+
+#result img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+}
+.loadAnim {
+    width: 5rem;
+    margin: auto;
+}
+#xlsx, #xml {
+    background-color: #2783ae;
+}
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  
+  .collapsible:hover {
+    background-color: #CCC;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0% 5%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
+  }
